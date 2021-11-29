@@ -4,11 +4,8 @@ import android.os.AsyncTask;
 import androidx.lifecycle.MutableLiveData;
 import android.app.Application;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 import androidx.lifecycle.LiveData;
-
-import javax.xml.transform.Result;
 
 public class CustomerRepository
 {
@@ -97,15 +94,16 @@ public class CustomerRepository
         private final CustomerDao updateTaskDao;
         UpdateAsyncTask(CustomerDao dao){ updateTaskDao = dao; }
         @Override
-        protected Void doInBackground(final Customer... param)
+        protected Void doInBackground(final Customer... customers)
         {
-            updateTaskDao.updateCustomer(param[0].getFirstName(),param[0].getLastName(),param[0].getPhoneNumber(),param[0].getAddress(),param[0].getCustomerId());
+            updateTaskDao.updateCustomer(customers[0].getFirstName(),customers[0].getLastName(),customers[0].getPhoneNumber(),customers[0].getAddress(),customers[0].getCustomerId());
             return null;
         }
     }
-    public void updateCustomer(String first,String last,String phone,String address)
+    public void updateCustomer(String first,String last,String phone,String address,int id)
     {
         Customer updatedCustomer = new Customer(first,last,phone,address);
+        updatedCustomer.setCustomerId(id);
         UpdateAsyncTask task = new UpdateAsyncTask(customerDao);
         task.execute(updatedCustomer);
     }

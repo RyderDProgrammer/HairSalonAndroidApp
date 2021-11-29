@@ -28,12 +28,10 @@ public interface CustomerDao
     @Query("SELECT * FROM customers WHERE customerId = :id")
     Customer singleCustomer(int id);*/
 
-    @Query("UPDATE customers " +
-            "SET firstName = :first, lastName = :last, phoneNumber = :phone, address = :address " +
-            "WHERE customerId = :id")
-            //"WHERE firstName = :first AND lastName = :last AND phoneNumber = :phone AND address = :address")
+    @Query("UPDATE customers SET firstName = :first, lastName = :last, phoneNumber = :phone, address = :address WHERE customerId = :id")
     void updateCustomer(String first,String last,String phone,String address,int id);
 
+    /*
     @Query("SELECT customerId FROM customers WHERE firstName = :first AND lastName = :last AND phoneNumber = :phone AND address = :address")
-    int getCustomerID(String first,String last,String phone,String address);
+    int getCustomerID(String first,String last,String phone,String address);*/
 }

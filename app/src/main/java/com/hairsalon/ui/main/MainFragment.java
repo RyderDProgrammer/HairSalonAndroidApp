@@ -32,6 +32,8 @@ public class MainFragment extends Fragment implements CustomerListAdapter.OnNote
     private EditText customerPhoneNumber;
     private EditText customerAddress;
 
+    private Customer existingCustomer;
+
     public static MainFragment newInstance()
     {
         return new MainFragment();
@@ -113,8 +115,9 @@ public class MainFragment extends Fragment implements CustomerListAdapter.OnNote
             String phone = customerPhoneNumber.getText().toString();
             String address = customerAddress.getText().toString();
 
-            if(!first.equals("") && !last.equals("") && !phone.equals("") && !address.equals("")) {
-                mViewModel.updateCustomer(first,last,phone,address);
+            if(!first.equals("") && !last.equals("") && !phone.equals("") && !address.equals(""))
+            {
+                mViewModel.updateCustomer(first,last,phone,address,existingCustomer.getCustomerId());
                 clearFields();
             }
         });
@@ -160,10 +163,10 @@ public class MainFragment extends Fragment implements CustomerListAdapter.OnNote
     @Override
     public void onNoteClick(int position)
     {
-        Customer customer = adapter.getCustomer(position);
-        customerFirstName.setText(customer.getFirstName());
-        customerLastName.setText(customer.getLastName());
-        customerPhoneNumber.setText(customer.getPhoneNumber());
-        customerAddress.setText(customer.getAddress());
+        existingCustomer = adapter.getCustomer(position);
+        customerFirstName.setText(existingCustomer.getFirstName());
+        customerLastName.setText(existingCustomer.getLastName());
+        customerPhoneNumber.setText(existingCustomer.getPhoneNumber());
+        customerAddress.setText(existingCustomer.getAddress());
     }
 }

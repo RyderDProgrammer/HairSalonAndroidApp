@@ -46,5 +46,5 @@ public class MainViewModel extends AndroidViewModel
         repository.deleteCustomer(firstName);
     }
     public int existingCustomer(String firstName) { return repository.existingCustomer(firstName);}
-    public void updateCustomer(String first,String last,String phone,String address) { repository.updateCustomer(first, last, phone, address);}
+    public void updateCustomer(String first,String last,String phone,String address,int id) { repository.updateCustomer(first, last, phone, address,id);}
 }
