@@ -1,6 +1,8 @@
 package com.hairsalon.ui.main;
 
 import androidx.lifecycle.ViewModelProvider;
+
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,11 +16,9 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Button;
 import com.hairsalon.Customer;
-import com.hairsalon.CustomerRepository;
-import com.hairsalon.CustomerRoomDatabase;
 import com.hairsalon.R;
+
 import java.util.List;
-import java.util.Locale;
 
 
 public class MainFragment extends Fragment implements CustomerListAdapter.OnNoteListener
@@ -73,7 +73,7 @@ public class MainFragment extends Fragment implements CustomerListAdapter.OnNote
 
     private void listenerSetup()
     {
-        Button addButton = getView().findViewById(R.id.addCustButton);
+        Button addButton = getView().findViewById(R.id.secondAddCustomerButton);
         Button deleteButton = getView().findViewById(R.id.deleteButton);
         Button cancel = getView().findViewById(R.id.cancelButton);
         Button updateButton = getView().findViewById(R.id.updateCustButton);
@@ -90,9 +90,10 @@ public class MainFragment extends Fragment implements CustomerListAdapter.OnNote
             if(custo == 0 && (!first.equals("") && !last.equals("") && !phone.equals("") && !address.equals("")))
             {
                 Customer customer = new Customer(first, last, phone, address);
-                mViewModel.insertCustomer(customer);
+                //mViewModel.insertCustomer(customer);
                 clearFields();
             }
+            openSecondScreen();
         });
 
         /*cancel.setOnClickListener(new View.OnClickListener()
@@ -168,5 +169,11 @@ public class MainFragment extends Fragment implements CustomerListAdapter.OnNote
         customerLastName.setText(existingCustomer.getLastName());
         customerPhoneNumber.setText(existingCustomer.getPhoneNumber());
         customerAddress.setText(existingCustomer.getAddress());
+    }
+
+    public void openSecondScreen()
+    {
+        Intent intent = new Intent(getContext(),SecondScreen.class);
+        startActivity(intent);
     }
 }
