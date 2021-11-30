@@ -80,7 +80,10 @@ public class MainFragment extends Fragment implements CustomerListAdapter.OnNote
 
 
         addButton.setOnClickListener(view -> {
-            String first = customerFirstName.getText().toString();
+            openSecondScreen();
+            //Removed all this code because the addButton doesn't care if a customer is selected it will
+            //just open the screen with blank information anyways.
+            /*String first = customerFirstName.getText().toString();
             String last = customerLastName.getText().toString();
             String phone = customerPhoneNumber.getText().toString();
             String address = customerAddress.getText().toString();
@@ -92,18 +95,18 @@ public class MainFragment extends Fragment implements CustomerListAdapter.OnNote
                 Customer customer = new Customer(first, last, phone, address);
                 //mViewModel.insertCustomer(customer);
                 clearFields();
-            }
-            openSecondScreen();
+            }*/
         });
 
-        /*cancel.setOnClickListener(new View.OnClickListener()
+        cancel.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                mViewModel.findCustomer(customerFirstName.getText().toString());
+                clearFields();
+                //mViewModel.findCustomer(customerFirstName.getText().toString());
             }
-        });*/
+        });
 
         deleteButton.setOnClickListener(view -> {
             mViewModel.deleteCustomer(customerFirstName.getText().toString());
@@ -115,11 +118,19 @@ public class MainFragment extends Fragment implements CustomerListAdapter.OnNote
             String last = customerLastName.getText().toString();
             String phone = customerPhoneNumber.getText().toString();
             String address = customerAddress.getText().toString();
-
+            //Ensures that the person actually clicks on a person to update.
             if(!first.equals("") && !last.equals("") && !phone.equals("") && !address.equals(""))
             {
-                mViewModel.updateCustomer(first,last,phone,address,existingCustomer.getCustomerId());
-                clearFields();
+                Intent intent = new Intent(getContext(), UpdateCustomerScreen.class);
+                //These pass values into the update screen.
+                intent.putExtra("firstName",first);
+                intent.putExtra("lastName",last);
+                intent.putExtra("phoneNumber",phone);
+                intent.putExtra("customerAddress",address);
+                intent.putExtra("customerId",existingCustomer.getCustomerId());
+                startActivity(intent);
+                //mViewModel.updateCustomer(first,last,phone,address,existingCustomer.getCustomerId());
+                //clearFields();
             }
         });
     }
