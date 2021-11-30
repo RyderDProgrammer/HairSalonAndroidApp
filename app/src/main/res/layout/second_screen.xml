@@ -2,15 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.main.MainFragment">
+    tools:context=".ui.main.SecondScreen">
 
     <TableLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="458dp">
 
         <TableRow
             android:layout_width="match_parent"
@@ -28,7 +27,7 @@
                 android:id="@+id/firstNameTextBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:editable="false"
+                android:editable="true"
                 android:ems="10"
                 android:inputType="none"
                 android:textSize="18sp"
@@ -51,7 +50,7 @@
                 android:id="@+id/lastNameTextBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:editable="false"
+                android:editable="true"
                 android:ems="10"
                 android:inputType="none"
                 android:textSize="18sp"
@@ -74,7 +73,7 @@
                 android:id="@+id/phoneNumTextBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:editable="false"
+                android:editable="true"
                 android:ems="10"
                 android:inputType="none"
                 android:textSize="18sp"
@@ -98,7 +97,7 @@
                 android:id="@+id/addressTextBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:editable="false"
+                android:editable="true"
                 android:ems="10"
                 android:inputType="none"
                 android:textSize="18sp"
@@ -122,45 +121,14 @@
             android:textColor="#000000" />
 
         <Button
-            android:id="@+id/deleteButton"
+            android:id="@+id/returnButton"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/delete_customer"
+            android:text="@string/go_back"
             android:textColor="#000000" />
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/updateCustButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/update_customer"
-            android:textColor="#000000" />
-
-        <Button
-            android:id="@+id/cancelButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/cancel"
-            android:textColor="#000000" />
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/customer_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp" />
 
 </LinearLayout>
