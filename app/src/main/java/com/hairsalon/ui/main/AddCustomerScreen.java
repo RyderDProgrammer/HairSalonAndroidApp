@@ -5,16 +5,14 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.hairsalon.Customer;
 import com.hairsalon.MainActivity;
 import com.hairsalon.R;
-import com.hairsalon.ui.main.MainFragment;
 
-public class SecondScreen extends AppCompatActivity
+public class AddCustomerScreen extends AppCompatActivity
 {
     private MainViewModel mViewModel;
 
@@ -30,7 +28,7 @@ public class SecondScreen extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.second_screen);
+        setContentView(R.layout.add_customer_screen);
 
         mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 

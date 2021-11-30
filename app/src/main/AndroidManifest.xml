@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HairSalon">
         <activity
-            android:name=".ui.main.SecondScreen"
+            android:name=".ui.main.AddCustomerScreen"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

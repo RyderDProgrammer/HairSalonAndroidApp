@@ -173,7 +173,7 @@ public class MainFragment extends Fragment implements CustomerListAdapter.OnNote
 
     public void openSecondScreen()
     {
-        Intent intent = new Intent(getContext(),SecondScreen.class);
+        Intent intent = new Intent(getContext(), AddCustomerScreen.class);
         startActivity(intent);
     }
 }
