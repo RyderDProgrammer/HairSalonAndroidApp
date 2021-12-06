@@ -9,8 +9,9 @@
     android:background="@drawable/bluebubblebg">
 
     <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="459dp"
+        android:layout_width="369dp"
+        android:layout_height="287dp"
+        android:layout_margin="20dp"
         android:background="@drawable/whiteoverlay">
 
         <TableRow
