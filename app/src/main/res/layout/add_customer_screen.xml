@@ -5,11 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.main.AddCustomerScreen">
+    tools:context=".ui.main.AddCustomerScreen"
+    android:background="@drawable/pinkflower">
 
     <TableLayout
         android:layout_width="wrap_content"
-        android:layout_height="458dp">
+        android:layout_height="458dp"
+        android:background="@drawable/whiteoverlay">
 
         <TableRow
             android:layout_width="match_parent"
