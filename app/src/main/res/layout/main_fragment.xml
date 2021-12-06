@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.main.MainFragment">
+    tools:context=".ui.main.MainFragment"
+    android:background="@drawable/bluebubblebg">
 
     <TableLayout
         android:layout_width="wrap_content"

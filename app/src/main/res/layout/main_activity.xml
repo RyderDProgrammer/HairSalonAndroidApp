@@ -5,5 +5,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/pinkflower_320x480"
+    android:background="@drawable/bluebubblebg"
     />

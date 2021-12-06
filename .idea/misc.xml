@@ -12,8 +12,10 @@
         <entry key="..\:/Users/TA-Cheryl/Desktop/AndroidApps/HairSalonAndroidApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2677083333333333" />
         <entry key="..\:/Users/TA-Cheryl/Desktop/AndroidApps/HairSalonAndroidApp/app/src/main/res/drawable/pinkflower_320x480.xml" value="0.20729166666666668" />
         <entry key="..\:/Users/TA-Cheryl/Desktop/AndroidApps/HairSalonAndroidApp/app/src/main/res/layout/add_customer_screen.xml" value="0.2515625" />
+        <entry key="..\:/Users/TA-Cheryl/Desktop/AndroidApps/HairSalonAndroidApp/app/src/main/res/layout/customer_list_item.xml" value="0.3104166666666667" />
         <entry key="..\:/Users/TA-Cheryl/Desktop/AndroidApps/HairSalonAndroidApp/app/src/main/res/layout/main_activity.xml" value="0.25" />
         <entry key="..\:/Users/TA-Cheryl/Desktop/AndroidApps/HairSalonAndroidApp/app/src/main/res/layout/main_fragment.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/TA-Cheryl/Desktop/AndroidApps/HairSalonAndroidApp/app/src/main/res/layout/update_customer_screen.xml" value="0.3104166666666667" />
       </map>
     </option>
   </component>
