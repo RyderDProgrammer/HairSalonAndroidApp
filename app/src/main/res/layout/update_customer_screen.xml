@@ -9,6 +9,7 @@
     android:background="@drawable/bluebubblebg">
 
     <TableLayout
+        android:background="@drawable/whiteoverlay"
         android:layout_width="wrap_content"
         android:layout_height="458dp">
 
@@ -119,7 +120,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/update_customer"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            />
 
         <Button
             android:id="@+id/returnButton"

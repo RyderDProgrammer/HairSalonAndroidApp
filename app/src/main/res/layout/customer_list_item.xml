@@ -6,6 +6,7 @@
     android:background="@drawable/bluebubblebg">
 
     <TextView
+        android:background="@drawable/whiteoverlay"
         android:id="@+id/customer_row"
         android:layout_width="match_parent"
         android:layout_height="30dp"
