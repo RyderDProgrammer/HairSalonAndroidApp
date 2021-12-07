@@ -144,7 +144,7 @@
         <Button
             android:id="@+id/updateCustButton"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/update_customer"
@@ -162,8 +162,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/customer_recycler"
-        android:layout_width="match_parent"
+        android:layout_width="287dp"
         android:layout_height="match_parent"
-        android:layout_margin="10dp" />
+        android:layout_margin="20dp"
+        android:background="@drawable/whiteoverlay" />
 
 </LinearLayout>
