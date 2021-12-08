@@ -5,11 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.main.UpdateCustomerScreen">
+    tools:context=".ui.main.UpdateCustomerScreen"
+    android:background="@drawable/fadedlights">
 
     <TableLayout
         android:layout_width="wrap_content"
-        android:layout_height="458dp">
+        android:layout_height="287dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/whiteoverlay">
 
         <TableRow
             android:layout_width="match_parent"
@@ -21,6 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/first_name"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <EditText
@@ -30,6 +34,7 @@
                 android:editable="true"
                 android:ems="10"
                 android:inputType="none"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         </TableRow>
@@ -44,6 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/last_name"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <EditText
@@ -53,6 +59,7 @@
                 android:editable="true"
                 android:ems="10"
                 android:inputType="none"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         </TableRow>
@@ -67,6 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/phone_number"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <EditText
@@ -76,6 +84,7 @@
                 android:editable="true"
                 android:ems="10"
                 android:inputType="none"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
@@ -91,6 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/address"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <EditText
@@ -100,8 +110,26 @@
                 android:editable="true"
                 android:ems="10"
                 android:inputType="none"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/errorTextBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF0000"
+                    android:text="Error Message Placeholder"
+                    android:layout_marginHorizontal="25dp"
+                    android:textSize="15sp" />
+            </TableRow>
         </TableRow>
     </TableLayout>
 
@@ -113,19 +141,22 @@
 
         <Button
             android:id="@+id/secondUpdateCustomerButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
+            android:backgroundTint="#e7d5cb"
             android:text="@string/update_customer"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            />
 
         <Button
             android:id="@+id/returnButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
+            android:backgroundTint="#e7d5cb"
             android:text="@string/go_back"
             android:textColor="#000000" />
 

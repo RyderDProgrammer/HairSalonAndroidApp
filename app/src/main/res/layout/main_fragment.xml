@@ -6,11 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.main.MainFragment">
+    tools:context=".ui.main.MainFragment"
+    android:background="@drawable/fadedlights">
 
     <TableLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="287dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/whiteoverlay">
 
         <TableRow
             android:layout_width="match_parent"
@@ -109,24 +112,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/secondAddCustomerButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
+            android:layout_width="64dp"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
+            android:backgroundTint="#e7d5cb"
             android:text="@string/add_customer"
             android:textColor="#000000" />
 
         <Button
             android:id="@+id/deleteButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            android:backgroundTint="#e7d5cb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_margin="10dp"
             android:text="@string/delete_customer"
             android:textColor="#000000" />
 
@@ -135,24 +141,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/updateCustButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
+            android:layout_width="68dp"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
+            android:backgroundTint="#e7d5cb"
             android:text="@string/update_customer"
             android:textColor="#000000" />
 
         <Button
             android:id="@+id/cancelButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
+            android:backgroundTint="#e7d5cb"
             android:text="@string/cancel"
             android:textColor="#000000" />
     </LinearLayout>
@@ -161,6 +170,7 @@
         android:id="@+id/customer_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp" />
+        android:layout_margin="20dp"
+        android:background="@drawable/whiteoverlay" />
 
 </LinearLayout>
