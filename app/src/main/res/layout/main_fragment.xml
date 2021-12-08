@@ -117,7 +117,7 @@
 
         <Button
             android:id="@+id/secondAddCustomerButton"
-            android:backgroundTint="#E7E4DD"
+            android:backgroundTint="#e7d5cb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -127,7 +127,7 @@
 
         <Button
             android:id="@+id/deleteButton"
-            android:backgroundTint="#E7E4DD"
+            android:backgroundTint="#e7d5cb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -144,7 +144,7 @@
 
         <Button
             android:id="@+id/updateCustButton"
-            android:backgroundTint="#E7E4DD"
+            android:backgroundTint="#e7d5cb"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -153,7 +153,7 @@
 
         <Button
             android:id="@+id/cancelButton"
-            android:backgroundTint="#E7E4DD"
+            android:backgroundTint="#e7d5cb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
