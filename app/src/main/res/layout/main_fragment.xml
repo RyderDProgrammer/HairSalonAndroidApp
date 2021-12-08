@@ -162,7 +162,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/customer_recycler"
-        android:layout_width="287dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp"
         android:background="@drawable/whiteoverlay" />

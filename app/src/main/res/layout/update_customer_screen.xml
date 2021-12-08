@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.main.UpdateCustomerScreen"
-    android:background="@drawable/bluebubblebg">
+    android:background="@drawable/fadedlights">
 
     <TableLayout
         android:background="@drawable/whiteoverlay"
