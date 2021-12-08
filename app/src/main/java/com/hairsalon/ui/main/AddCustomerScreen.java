@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.hairsalon.Customer;
 import com.hairsalon.MainActivity;
@@ -23,6 +24,7 @@ public class AddCustomerScreen extends AppCompatActivity
     private EditText customerLastName;
     private EditText customerPhoneNumber;
     private EditText customerAddress;
+    private TextView addCustomerErrorText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,7 +38,9 @@ public class AddCustomerScreen extends AppCompatActivity
         customerLastName = findViewById(R.id.lastNameTextBox);
         customerPhoneNumber = findViewById(R.id.phoneNumTextBox);
         customerAddress = findViewById(R.id.addressTextBox);
+        addCustomerErrorText = findViewById(R.id.addErrorTextBox);
 
+        addCustomerErrorText.setText("");
         returnButton = findViewById(R.id.returnButton);
         returnButton.setOnClickListener(v -> returnHome());
         addButton = findViewById(R.id.secondAddCustomerButton);
@@ -59,10 +63,31 @@ public class AddCustomerScreen extends AppCompatActivity
         int custo = 0;
         custo = mViewModel.existingCustomer(first);
 
-        if(custo == 0 && (!first.equals("") && !last.equals("") && !phone.equals("") && !address.equals("")))
+        if(first.equals(""))
+        {
+            addCustomerErrorText.setText("Please enter a first name");
+        }
+        else if(last.equals(""))
+        {
+            addCustomerErrorText.setText("Please enter a last name");
+        }
+        else if(phone.equals(""))
+        {
+            addCustomerErrorText.setText("Please enter a phone number");
+        }
+        else if(parseIntOrNull(phone) == null || phone.length() != 9)
+        {
+            addCustomerErrorText.setText("Please enter a valid phone number thats 9 digits long");
+        }
+        else if(address.equals(""))
+        {
+            addCustomerErrorText.setText("Please enter a address");
+        }
+        else if(custo == 0 && (!first.equals("") && !last.equals("") && !phone.equals("") && !address.equals("")))
         {
             Customer customer = new Customer(first, last, phone, address);
             mViewModel.insertCustomer(customer);
+            addCustomerErrorText.setText("Customer added successfully");
             clearFields();
         }
     }
@@ -73,5 +98,13 @@ public class AddCustomerScreen extends AppCompatActivity
         customerLastName.setText("");
         customerPhoneNumber.setText("");
         customerAddress.setText("");
+    }
+
+    public Integer parseIntOrNull(String value) {
+        try {
+            return Integer.parseInt(value);
+        } catch (NumberFormatException e) {
+            return null;
+        }
     }
 }
