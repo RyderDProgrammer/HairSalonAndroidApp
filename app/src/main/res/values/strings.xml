@@ -8,6 +8,6 @@
     <string name="cancel">Cancel</string>
     <string name="delete_customer">Delete Customer</string>
     <string name="textview">TextView</string>
-    <string name="update_customer">Update Customer</string>
+    <string name="update_customer">Update</string>
     <string name="go_back">Go Back</string>
 </resources>
