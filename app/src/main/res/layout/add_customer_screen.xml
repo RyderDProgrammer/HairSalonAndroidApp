@@ -117,6 +117,7 @@
                     android:id="@+id/errorTextBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#FF0000"
                     android:text="Error Message Placeholder"
                     android:layout_marginHorizontal="25dp"
                     android:textSize="15sp" />
