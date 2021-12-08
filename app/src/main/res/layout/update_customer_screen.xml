@@ -9,9 +9,10 @@
     android:background="@drawable/fadedlights">
 
     <TableLayout
-        android:background="@drawable/whiteoverlay"
         android:layout_width="wrap_content"
-        android:layout_height="458dp">
+        android:layout_height="287dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/whiteoverlay">
 
         <TableRow
             android:layout_width="match_parent"
@@ -115,20 +116,22 @@
 
         <Button
             android:id="@+id/secondUpdateCustomerButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
+            android:backgroundTint="#e7d5cb"
             android:text="@string/update_customer"
             android:textColor="#000000"
             />
 
         <Button
             android:id="@+id/returnButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
+            android:backgroundTint="#e7d5cb"
             android:text="@string/go_back"
             android:textColor="#000000" />
 
