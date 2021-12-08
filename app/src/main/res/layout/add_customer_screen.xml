@@ -116,7 +116,7 @@
 
         <Button
             android:id="@+id/secondAddCustomerButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            android:backgroundTint="#E7E4DD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -125,7 +125,7 @@
 
         <Button
             android:id="@+id/returnButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            android:backgroundTint="#E7E4DD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
