@@ -116,19 +116,21 @@
 
         <Button
             android:id="@+id/secondAddCustomerButton"
-            android:backgroundTint="#E7E4DD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
+            android:backgroundTint="#e7d5cb"
             android:text="@string/add_customer"
             android:textColor="#000000" />
 
         <Button
             android:id="@+id/returnButton"
-            android:backgroundTint="#E7E4DD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
+            android:backgroundTint="#e7d5cb"
             android:text="@string/go_back"
             android:textColor="#000000" />
 

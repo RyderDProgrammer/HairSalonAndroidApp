@@ -117,14 +117,13 @@
 
         <Button
             android:id="@+id/secondAddCustomerButton"
-            android:backgroundTint="#e7d5cb"
-            android:layout_width="wrap_content"
+            android:layout_width="64dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#e7d5cb"
             android:text="@string/add_customer"
-            android:textColor="#000000"
-            />
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/deleteButton"
@@ -146,21 +145,21 @@
 
         <Button
             android:id="@+id/updateCustButton"
-            android:backgroundTint="#e7d5cb"
-            android:layout_width="70dp"
+            android:layout_width="68dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#e7d5cb"
             android:text="@string/update_customer"
             android:textColor="#000000" />
 
         <Button
             android:id="@+id/cancelButton"
-            android:backgroundTint="#e7d5cb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#e7d5cb"
             android:text="@string/cancel"
             android:textColor="#000000" />
     </LinearLayout>
