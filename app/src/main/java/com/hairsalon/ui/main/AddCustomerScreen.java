@@ -75,9 +75,9 @@ public class AddCustomerScreen extends AppCompatActivity
         {
             addCustomerErrorText.setText("Please enter a phone number");
         }
-        else if(parseIntOrNull(phone) == null || phone.length() != 9)
+        else if(parseIntOrNull(phone) == null || phone.length() != 10)
         {
-            addCustomerErrorText.setText("Please enter a valid phone number thats 9 digits long");
+            addCustomerErrorText.setText("Please enter a valid phone number thats 10 digits long");
         }
         else if(address.equals(""))
         {

@@ -88,9 +88,9 @@ public class UpdateCustomerScreen extends AppCompatActivity
         {
             updateCustomerErrorText.setText("Please enter a phone number");
         }
-        else if(parseIntOrNull(phone) == null || phone.length() != 9)
+        else if(parseIntOrNull(phone) == null || phone.length() != 10)
         {
-            updateCustomerErrorText.setText("Please enter a valid phone number thats 9 digits long");
+            updateCustomerErrorText.setText("Please enter a valid phone number thats 10 digits long");
         }
         else if(address.equals(""))
         {
