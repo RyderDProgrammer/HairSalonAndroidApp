@@ -80,7 +80,14 @@ public class MainFragment extends Fragment implements CustomerListAdapter.OnNote
 
 
         addButton.setOnClickListener(view -> {
-            openSecondScreen();
+            String first = customerFirstName.getText().toString();
+            String last = customerLastName.getText().toString();
+            String phone = customerPhoneNumber.getText().toString();
+            String address = customerAddress.getText().toString();
+            //Makes sure that the user has no-one selected to add in
+            if(first.equals("") && last.equals("") && phone.equals("") && address.equals("")) {
+                openSecondScreen();
+            }
             //Removed all this code because the addButton doesn't care if a customer is selected it will
             //just open the screen with blank information anyways.
             /*String first = customerFirstName.getText().toString();
