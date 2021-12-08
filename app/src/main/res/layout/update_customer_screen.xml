@@ -24,6 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/first_name"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <EditText
@@ -33,6 +34,7 @@
                 android:editable="true"
                 android:ems="10"
                 android:inputType="none"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         </TableRow>
@@ -47,6 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/last_name"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <EditText
@@ -56,6 +59,7 @@
                 android:editable="true"
                 android:ems="10"
                 android:inputType="none"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         </TableRow>
@@ -70,6 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/phone_number"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <EditText
@@ -79,6 +84,7 @@
                 android:editable="true"
                 android:ems="10"
                 android:inputType="none"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
@@ -94,6 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/address"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <EditText
@@ -103,8 +110,26 @@
                 android:editable="true"
                 android:ems="10"
                 android:inputType="none"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/errorTextBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF0000"
+                    android:text="Error Message Placeholder"
+                    android:layout_marginHorizontal="25dp"
+                    android:textSize="15sp" />
+            </TableRow>
         </TableRow>
     </TableLayout>
 
