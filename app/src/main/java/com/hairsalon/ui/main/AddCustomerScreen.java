@@ -67,6 +67,10 @@ public class AddCustomerScreen extends AppCompatActivity
         {
             addCustomerErrorText.setText("Please enter a first name");
         }
+        else if(custo != 0)
+        {
+            addCustomerErrorText.setText("Customer with that first name already exist.");
+        }
         else if(last.equals(""))
         {
             addCustomerErrorText.setText("Please enter a last name");
@@ -75,7 +79,7 @@ public class AddCustomerScreen extends AppCompatActivity
         {
             addCustomerErrorText.setText("Please enter a phone number");
         }
-        else if(parseIntOrNull(phone) == null || phone.length() != 10)
+        else if(parseIntOrNull(phone) == null || phone.length() != 10 || Integer.parseInt(phone) <= 0)
         {
             addCustomerErrorText.setText("Please enter a valid phone number thats 10 digits long");
         }
@@ -83,7 +87,7 @@ public class AddCustomerScreen extends AppCompatActivity
         {
             addCustomerErrorText.setText("Please enter a address");
         }
-        else if(custo == 0 && (!first.equals("") && !last.equals("") && !phone.equals("") && !address.equals("")))
+        else
         {
             Customer customer = new Customer(first, last, phone, address);
             mViewModel.insertCustomer(customer);
