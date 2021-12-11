@@ -76,9 +76,17 @@ public class UpdateCustomerScreen extends AppCompatActivity
         String phone = customerPhoneNumber.getText().toString();
         String address = customerAddress.getText().toString();
 
+        int custo = 0;
+        custo = mViewModel.existingCustomer(first);
+
         if(first.equals(""))
         {
             updateCustomerErrorText.setText("Please enter a first name");
+        }
+        //This is stating that if the user is passing in all the same data it already exist.
+        else if(first.equals(updatedCustomer.getFirstName()) && last.equals(updatedCustomer.getLastName()) && phone.equals(updatedCustomer.getPhoneNumber()) && address.equals(updatedCustomer.getAddress()) && custo!= 0)
+        {
+            updateCustomerErrorText.setText("Customer with that information already exist.");
         }
         else if(last.equals(""))
         {
@@ -88,7 +96,7 @@ public class UpdateCustomerScreen extends AppCompatActivity
         {
             updateCustomerErrorText.setText("Please enter a phone number");
         }
-        else if(parseIntOrNull(phone) == null || phone.length() != 10)
+        else if(parseIntOrNull(phone) == null || phone.length() != 10 || Integer.parseInt(phone) <= 0)
         {
             updateCustomerErrorText.setText("Please enter a valid phone number thats 10 digits long");
         }
@@ -96,7 +104,7 @@ public class UpdateCustomerScreen extends AppCompatActivity
         {
             updateCustomerErrorText.setText("Please enter a address");
         }
-        else if(!first.equals("") && !last.equals("") && !phone.equals("") && !address.equals(""))
+        else
         {
             updateCustomerErrorText.setText("Customer updated successfully");
             mViewModel.updateCustomer(first,last,phone,address,updatedCustomer.getCustomerId());
